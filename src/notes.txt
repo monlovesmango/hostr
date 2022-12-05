@@ -1,0 +1,10 @@
+files table
+-filename (pk)
+-timestamp
+-signed event
+-folder
+
+indexes
+-timestamp
+-folder, timestamp
+-tags, timestamp (manual index)

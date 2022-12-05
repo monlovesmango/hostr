@@ -1,0 +1,32 @@
+{
+  "name": "hostr",
+  "version": "0.0.1",
+  "description": "server for nostr media",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx watchify app/index.js -p esmify -o app/bundle.js",
+    "build": "browserify app/index.js -o app/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monlovesmango/hostr.git"
+  },
+  "author": "monlovesmango",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monlovesmango/hostr/issues"
+  },
+  "homepage": "https://github.com/monlovesmango/hostr#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "crypto-js": "^4.1.1",
+    "node-forge": "^1.3.1",
+    "nostr-tools": "^0.24.1"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1",
+    "uniq": "^1.0.1",
+    "watchify": "^4.0.0"
+  }
+}

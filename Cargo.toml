@@ -1,0 +1,18 @@
+[package]
+name = "hostr"
+version = "0.0.1"
+edition = "2021"
+description = "resource server for Nostr protocal"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+sha2 = "0.10.6"
+data-encoding = "2.3.2"
+base64-url = "1.4.13"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version="1.0", features = ["std", "preserve_order"] }
+serde_with = { version = "1.9.4", features = ["json"] }
+secp256k1 = { version = "0.24.1", features = ["serde", "bitcoin_hashes"] }

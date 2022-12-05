@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="/app/bundle.js" async></script>
+    <script type="style" src="/app/styles.css" async></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>hostr</title>
+</head>
+
+<body style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 id="header"></h1>
+        <div id="menu" style="display: flex; justify-content: end; align-items: center; gap: 1rem; position: relative;">
+            <div id="username"></div>
+            <button id="menu-button" class="material-icons">menu</button>
+            <ul id="menu-items" style="display: none; position: absolute; right: 0; top: 100%; flex-direction: column;">
+                <button>upload</button>
+                <button id="logout-button">logout</button>
+            </ul>
+        </div>
+    </div>
+    <div id="signIn" style="display: flex; flex-direction: row; justify-items: start; gap: 1rem;">
+        <div style="display: flex; flex-direction: row; justify-items: start; gap: .3rem;">
+            <label for="priv-key">enter private key</label>
+            <input type="text" id="priv-key">
+            <input type="submit" value="submit" id='priv-key-submit' />
+        </div>
+        <input type="button" id="nos2x" value="use nos2x extension" />
+    </div>
+    <div id="content" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+    </div>
+    <form id="upload-form" method="post" enctype="multipart/form-data">
+        <label for="upload">add new file</label>
+        <input type="file" id="upload" name='upload' multiple />
+        <input type="submit" value="submit" id='upload-form-submit' />
+    </form>
+    <div id="selected-media"
+        style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;"></div>
+</body>
+
+</html>
